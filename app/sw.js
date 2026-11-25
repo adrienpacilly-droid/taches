@@ -1,5 +1,5 @@
 // Garde l'application sur l'appareil pour l'ouvrir hors connexion. Les tâches n'y passent jamais.
-const NOM = 'taches-1';
+const NOM = 'taches-2';
 const FICHIERS = ['./', 'index.html', 'app.css', 'app.js', 'core.js', 'net.js', 'config.js', 'manifest.webmanifest', 'icone-180.png', 'icone-512.png'];
 self.addEventListener('install', e => e.waitUntil(caches.open(NOM).then(c => c.addAll(FICHIERS.map(f => new Request(f, { cache: 'reload' })))).then(() => self.skipWaiting())));
 self.addEventListener('activate', e => e.waitUntil(caches.keys().then(l => Promise.all(l.filter(n => n.startsWith('taches-') && n !== NOM).map(n => caches.delete(n)))).then(() => self.clients.claim())));
