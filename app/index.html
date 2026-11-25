@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self' https://iwdoelgsrisgncpbewxf.supabase.co; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Tâches">
+<meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14191f" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icone-180.png">
+<link rel="icon" href="icone-180.png">
+<link rel="stylesheet" href="app.css">
+<title>Tâches</title>
+</head>
+<body>
+<noscript>Tâches a besoin de JavaScript.</noscript>
+
+<main id="connexion" hidden>
+  <form id="formulaire">
+    <h1>Tâches</h1>
+    <p class="doux">Connecte-toi avec le compte créé dans l'app Mac.</p>
+    <label>E-mail<input name="email" type="email" autocomplete="username" inputmode="email" autocapitalize="off" required></label>
+    <label>Mot de passe<input name="password" type="password" autocomplete="current-password" required></label>
+    <p class="erreur" id="erreur" role="alert" hidden></p>
+    <button class="plein">Se connecter</button>
+  </form>
+</main>
+
+<div id="app" hidden>
+  <header>
+    <div><h1 id="titre"></h1><p class="doux" id="sousTitre"></p></div>
+    <button id="etat" class="etat" aria-label="Synchronisation"><span class="point"></span><span id="etatTexte"></span></button>
+  </header>
+  <main id="contenu"></main>
+  <nav aria-label="Vues">
+    <button data-vue="jour"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>Aujourd'hui</button>
+    <button id="plus" aria-label="Nouvelle tâche"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+    <button data-vue="kanban"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="4.6" height="16" rx="1.4"/><rect x="9.7" y="4" width="4.6" height="11" rx="1.4"/><rect x="15.9" y="4" width="4.6" height="7" rx="1.4"/></svg>Kanban</button>
+  </nav>
+</div>
+<div id="avis" role="status" aria-live="polite" hidden><span></span><button hidden>Annuler</button></div>
+<dialog id="feuille" aria-label="Fenêtre"></dialog>
+<script type="module" src="app.js"></script>
+</body>
+</html>
