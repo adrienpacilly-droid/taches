@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>taches</title>
+<meta name="description" content="Une application personnelle pour Mac qui réunit tâches, calendrier et suivi de candidatures.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+<header><a class="nom" href="./">taches</a>
+<nav aria-label="Pages"><a href="confidentialite.html">Confidentialité</a><a href="conditions.html">Conditions</a></nav></header>
+<main>
+<section class="accueil">
+<div class="mots"><h1>Les tâches et le calendrier, dans la même journée</h1>
+<p>taches est une application personnelle pour Mac. Elle réunit une liste de tâches, un calendrier et un suivi de candidatures tenu dans Google Sheets.</p></div>
+<ul class="jour" aria-label="Exemple de journée">
+<li><time>09:00</time><div class="bloc" style="--c:var(--orange)">Cours de stratégie<small>09:00 à 11:30</small></div></li>
+<li><time>14:00</time><div class="bloc tache fait" style="--c:var(--bleu)">Finir le dossier de groupe</div></li>
+<li><time>15:30</time><div class="bloc tache" style="--c:var(--rouge)">Relancer un contact</div></li>
+<li><time>18:00</time><div class="bloc" style="--c:var(--vert)">Sport<small>18:00 à 19:30</small></div></li>
+</ul>
+</section>
+<section class="partie"><h2>Le calendrier montre aussi ce qu'il reste à faire</h2>
+<p>Les rendez-vous du Mac s'affichent par jour, semaine ou mois. Une tâche se glisse sur un créneau libre.</p>
+<img src="calendrier.png" width="1800" height="1002" alt="Vue semaine du calendrier, avec les tâches à planifier sur la droite. Données d'exemple."></section>
+<section class="partie"><h2>Un tableau à adapter</h2>
+<p>Les colonnes, les domaines et les vues se créent et se modifient librement.</p>
+<img src="kanban.png" alt="Tableau de tâches en colonnes. Données d'exemple."></section>
+<section class="partie duo"><div class="mots"><h2>L'essentiel sur le bureau</h2>
+<p>Le widget affiche les prochains rendez-vous et les tâches du jour, à cocher sans ouvrir l'application.</p></div>
+<img src="widget.png" width="658" height="690" alt="Widget avec rendez-vous, mois et tâches du jour. Données d'exemple."></section>
+<section class="partie"><h2>Pourquoi l'application demande un accès à Google Sheets</h2>
+<p>Elle lit un seul fichier de suivi de candidatures pour créer les cartes de relance. Elle y met à jour un statut, une date, une action ou une note uniquement après validation à l'écran. Les données restent sur le Mac et dans Google Sheets, sans serveur intermédiaire. Le détail est dans les <a href="confidentialite.html">règles de confidentialité</a>.</p>
+<p class="note">L'application est réservée à l'usage de la personne qui l'a créée et n'est pas proposée au téléchargement. Les images montrent des données d'exemple.</p></section>
+</main>
+<footer><span>taches, une application personnelle pour Mac</span><nav aria-label="Pages légales"><a href="confidentialite.html">Règles de confidentialité</a><a href="conditions.html">Conditions d'utilisation</a></nav></footer>
+</div>
+</body>
+</html>
